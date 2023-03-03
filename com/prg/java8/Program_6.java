@@ -1,6 +1,5 @@
 package com.prg.java8;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,15 +16,18 @@ public class Program_6 {
     }
 
     public static List<Employee> getSalaryFilter(List<Employee> filterBySalary,double filterSalary){
-        List<Employee> salaryFilter= filterBySalary.stream().filter(f->f.getSalary()>filterSalary).collect(Collectors.toList());
-       return salaryFilter;
+        return filterBySalary.stream().filter(f->f.getSalary()>filterSalary).collect(Collectors.toList());
+    }
+
+    public static Employee findByName(List<Employee> filterByName, String name) {
+        return filterByName.stream().filter(e -> name.equals(e.getName())).findAny().orElse(null);
     }
 
     public static void main(String[] args) {
         List<Employee> emp=getSalaryFilter(new Program_6().lists,65000.0f);
         emp.forEach(System.out::println);
-
-
-
+        System.out.println("Filtering the values by names");
+        Employee e=findByName(new Program_6().lists,"Bhanu");
+        System.out.println(e);
     }
 }
