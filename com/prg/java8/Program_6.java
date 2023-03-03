@@ -7,12 +7,13 @@ import java.util.stream.Collectors;
 public class Program_6 {
   private static List<Employee> lists=null;
 
-    public Program_6(){
-                lists= Arrays.asList(new Employee(101,"Sunil",32,"sunil11@gmail.com",60000.0f),
-                new Employee(103,"Bhanu",35,"bhanu76@gmail.com",56000.0f),
-                new Employee(105,"Vasu",33,"vasu56@gmail.com",68000.0f),
-                new Employee(104,"Chandan",31,"chandan23@gmail.com",58000.0f),
-                new Employee(102,"Nishant",34,"nishanth12@gmail.com",67000.0f));
+    public Program_6() {
+        lists = Arrays.asList(new Employee(101, "Sunil", 32, "sunil11@gmail.com", 60000.0f),
+                new Employee(103, "Bhanu", 35, "bhanu76@gmail.com", 56000.0f),
+                new Employee(105, "Vasu", 33, "vasu56@gmail.com", 68000.0f),
+                new Employee(104, "Chandan", 31, "chandan23@gmail.com", 58000.0f),
+                new Employee(102, "Nishant", 34, "nishanth12@gmail.com", 67000.0f),
+                new Employee(106, "Shiva", 33, "shiva123@gmail.com", 65000.0f));
     }
 
     public static List<Employee> getSalaryFilter(List<Employee> filterBySalary,double filterSalary){
@@ -29,5 +30,6 @@ public class Program_6 {
         System.out.println("Filtering the values by names");
         Employee e=findByName(new Program_6().lists,"Bhanu");
         System.out.println(e);
+
     }
 }
