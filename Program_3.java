@@ -17,7 +17,7 @@ public class Program_3 {
         List<String> fruitsFilter = listOfFruits.stream()
                 .filter(fruit -> !"Kiwi".equals(fruit))
                 .collect(Collectors.toList());
-        System.out.println(fruitsFilter);
+        fruitsFilter.forEach(System.out::println);
     }
     //we will reduce the no.of lines of code using the java8
     public static List<String> getFilterFruitsDetails(List<String> fruits,String filter){
