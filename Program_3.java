@@ -5,7 +5,6 @@ import java.util.stream.Collectors;
 
 public class Program_3 {
     private static final List<String> listOfFruits=Arrays.asList("Banana","Apple","Kiwi","Grapes");
-
     public static void main(String[] args) {
         List<String> result=getFilterFruitsDetails(listOfFruits,"Banana");
         for(String fruit:result){
