@@ -1,6 +1,8 @@
 package com.prg.java8;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -24,12 +26,21 @@ public class Program_6 {
         return filterByName.stream().filter(e -> name.equals(e.getName())).findAny().orElse(null);
     }
 
+    public static void sorting(){
+        Collections.sort(lists,Comparator.comparing(Employee::getName));
+        System.out.println(lists);
+    }
+
+
     public static void main(String[] args) {
         List<Employee> emp=getSalaryFilter(new Program_6().lists,65000.0f);
         emp.forEach(System.out::println);
         System.out.println("Filtering the values by names");
         Employee e=findByName(new Program_6().lists,"Bhanu");
         System.out.println(e);
+        System.out.println("After sorting with names");
+        sorting();
+
 
     }
 }
