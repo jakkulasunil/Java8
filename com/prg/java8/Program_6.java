@@ -31,6 +31,11 @@ public class Program_6 {
         System.out.println(lists);
     }
 
+    public static void sumOfSalaries(List<Employee> employee){
+        Double d=employee.stream().collect(Collectors.averagingDouble(e->e.getSalary())).doubleValue();
+        System.out.println(d);
+    }
+
 
     public static void main(String[] args) {
         List<Employee> emp=getSalaryFilter(new Program_6().lists,65000.0f);
@@ -40,6 +45,9 @@ public class Program_6 {
         System.out.println(e);
         System.out.println("After sorting with names");
         sorting();
+        System.out.println("Print all employee salaries");
+        System.out.println("Average Salaries of employees");
+        sumOfSalaries(new Program_6().lists);
 
 
     }
