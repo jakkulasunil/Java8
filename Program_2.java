@@ -4,6 +4,7 @@ import java.util.Map;
 public class Program_2 {
 
     public static void main(String[] args) {
+        System.out.println("Hello");
         Map<String,String> map=new HashMap<>();
         map.put("PM","Prime Minister");
         map.put("CM","Chief Minister");
