@@ -1,3 +1,5 @@
+package com.prg.java8;
+
 import java.util.HashMap;
 
 import static java.util.Map.Entry.comparingByValue;
